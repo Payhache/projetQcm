@@ -1,27 +1,100 @@
-# ProjetQcm
+# Projet QCM pour Laboratoir de l'hopital Nord 
+(This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+### Modification du 31/07/2020
+* Création du projet
+  * génération du projet Angular
+  * création des composants :
+      * Login : Permet à l'utilsateur de se logger si il posséde déja un compte ou de s'inscrire.
+      * Subscribe : Permet à l'utilisateur de s'inscrire
+      * qcm-themes : Premiére page où l'utilisateur arrive et peut choisir son thème
+      * qcm-choice : Aprés avoir choisit le théme l'utilisateur choisit son questionnaire
+      * qcm-questions : Questionnaire à proprement parlé 
+      
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Modification du 28/07/2020
 
-## Code scaffolding
+* ajout des fonctionnalités sur le questionnaire : 
+    * un utilisateur peut revenir en arriére ou sauter une question.
+    * le questionnaire posséde un temps limite pour sa réalisation
+    * Une question peut posséder une photo
+    * Une réponse peut contenir jusqu'à 3 photos maximum
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Fonctionnement du questionnaire :
 
-## Running unit tests
+Création d'une **QCM** pour le laboratoire de l'Hopital Nord de Saint-Etienne. Ce questionnaire servira à l'habilitation des internes lors de leur cursus, et des techniciens lors de leur arrivée au laboratoire. il devra permettre :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- de vérifier leur connaissance sur les sujets souhaités.
+- de monter en compétence sur les sujets souhaités.
 
-## Running end-to-end tests
+L'utilisateur devra pouvoir s'inscrire seul sur la plateforme. L'application devra donc être en mesure de gerer le stockage et la vérification des données via une basse de donnée (BDD). Lors de son inscription il devra remplir :
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Un pseudo (qui sera _unique_ en BDD et servira d'identifiant)
+- Un nom
+- Un prénom
+- Un role (Technicien ou Interne)
+- Un mot de passe (qui devra être vérifié deux fois en cas d'erreure de saisie)
+- Une clé communiquée par le service afin que seul les gens du service concerné puisse s'inscire.
 
-## Further help
+Une fois inscrit l'utilisateur devra pouvoir se logger et accéder aux thèmes et questionnaires qui lui sont liés. La page d'acceuil aprés login sera donc une selection des différents thémes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Aprés la sélection des thémes l'utilisateur arrive sur la liste des questionnaires liés. Il peut voir si
+
+- Si il a déja fait le questionnaire
+- Si il posséde un questionnaire en cours (commencé mais pas finit)
+- Si le questionnaire est finit il voit si il est réussit ou échoué (couleur plus résultat en nbre de bonne réponse / questions)
+
+Lorsque l'utilisateur fait son questionnaire, il peut revenir en arriére ou sauter une question. Cependant, le questionnaire global à une limite de temps.
+
+Les questions peuvent : 
+* Contenir une photo lié à la question
+* Etre évitées pour ensuite revenir dessu . 
+
+Les réponses peuvent : 
+* Avoir jusqu'à 3 photos dans les explications. 
+
+L'administrateur doit être en mesure :
+
+- d'ajouter des questions ou des thémes
+- de modifier des questions ou des thémes
+- de supprimer des questions ou des thémes
+- d'éditer des questions ou des thémes
+- Consulter les résultats de tous les utilisateurs.
+- de changer les rôles de utilisateurs (Interne / Technicien / Admin)
+
+## Définir les deadlines :
+
+## Répartition des rôles :
+
+- niveau d'implication : ex Ph tout "le code interne" et Laurie "le design"
+- Qui fait quoi ?
+
+---
+
+### Modifs
+
+- titre Laboratoire de pharmacologie toxicologie gaz du sang sur la page d'acceuil .
+- ajout du suivit sur le choix du questionnaire .
+- il n'y aura qu'un questionnaire par théme
+
+---
+
+### Questions à Manon
+
+- L'utilisateur peut il revenir en arriére aprés avoir répondu à une question (oui) (Timer global sur le questionnaire)
+- Plusieurs photo Question ou Réponse ? ou les deux ? theme peut etre logo ou photo / Question 1 seule photo (ou zero) et réponse (zéro ou plusieurs - 3 max.);
+
+---
+
+### A faire
+
+15 jour avoir le CRUD réalisé :
+
+- Essayer de comprendre le code de trucmuch (https://www.codeproject.com/Articles/1167451/Quiz-Application-in-Angular)
+- _Se former sur l'utilisation de **GIT** à plusieurs_
+- définir la structure ANGULAR du projet
+- BDD ? -> Firebase PH pour voir par rapport au fichier JSON et aux requétes HTTP
