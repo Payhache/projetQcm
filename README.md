@@ -9,7 +9,15 @@
       * Subscribe : Permet à l'utilisateur de s'inscrire
       * qcm-themes : Premiére page où l'utilisateur arrive et peut choisir son thème
       * qcm-choice : Aprés avoir choisit le théme l'utilisateur choisit son questionnaire
-      * qcm-questions : Questionnaire à proprement parlé 
+      * qcm-questions : Questionnaire à proprement parlé
+   * Création de classes : 
+        * answer pour les réponses 
+        * profile pour les profil utilisateur 
+        * question pour les questions
+        * quiz pour le questionnaire 
+        * theme pour les themes
+        * user pour l'utilisateur
+
 ---
 #### TODO :
 * Création des services
