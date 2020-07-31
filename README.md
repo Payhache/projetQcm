@@ -1,4 +1,4 @@
-# Projet QCM pour Laboratoir de l'hopital Nord 
+# Projet QCM pour Laboratoire de l'hôpital Nord 
 (This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.)
 
 ### Modification du 31/07/2020
@@ -10,8 +10,18 @@
       * qcm-themes : Premiére page où l'utilisateur arrive et peut choisir son thème
       * qcm-choice : Aprés avoir choisit le théme l'utilisateur choisit son questionnaire
       * qcm-questions : Questionnaire à proprement parlé 
-      
+---
+#### TODO :
+* Création des services
+* Remplissage des contenus (sans logique BDD pour le moment)
+* Création d'un fichier JSON qui servira de BDD pour tester la logique
+* Création de la logique
 
+##### Modifs
+
+- titre Laboratoire de pharmacologie toxicologie gaz du sang sur la page d'acceuil .
+
+---
 
 ### Modification du 28/07/2020
 
@@ -66,29 +76,9 @@ L'administrateur doit être en mesure :
 - Consulter les résultats de tous les utilisateurs.
 - de changer les rôles de utilisateurs (Interne / Technicien / Admin)
 
-## Définir les deadlines :
-
-## Répartition des rôles :
-
-- niveau d'implication : ex Ph tout "le code interne" et Laurie "le design"
-- Qui fait quoi ?
-
 ---
 
-### Modifs
 
-- titre Laboratoire de pharmacologie toxicologie gaz du sang sur la page d'acceuil .
-- ajout du suivit sur le choix du questionnaire .
-- il n'y aura qu'un questionnaire par théme
-
----
-
-### Questions à Manon
-
-- L'utilisateur peut il revenir en arriére aprés avoir répondu à une question (oui) (Timer global sur le questionnaire)
-- Plusieurs photo Question ou Réponse ? ou les deux ? theme peut etre logo ou photo / Question 1 seule photo (ou zero) et réponse (zéro ou plusieurs - 3 max.);
-
----
 
 ### A faire
 
